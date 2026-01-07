@@ -32,11 +32,12 @@ ESGF_LLM_Experiments/
 │   ├── esgf_client.py      # ESGF Search API client
 │   └── llm_interface.py    # Claude-powered natural language interface
 ├── examples/
-│   ├── test_client.py      # Basic ESGF API test
+│   ├── test_client.py              # Basic ESGF API test
 │   ├── run_temperature_doe.py      # Temperature analysis (Argonne)
 │   ├── run_temperature_ornl.py     # Temperature analysis (Oak Ridge)
 │   ├── plot_combined.py            # Combined 5-model visualization
-│   ├── run_regional_analysis.py    # Regional temperature comparison
+│   ├── run_regional_analysis.py    # Regional: Oak Ridge vs Livermore
+│   ├── run_regional_chicago_nz.py  # Regional: Chicago vs New Zealand
 │   ├── run_gpp_analysis.py         # GPP change analysis (CESM2)
 │   └── plot_gpp_regions.py         # Regional GPP maps
 └── doe_cmip6_holdings.json  # Inventory of CMIP6 data at DOE centers
@@ -64,6 +65,16 @@ ESGF_LLM_Experiments/
 ![Temperature Projections](Artifacts/temperature_combined_doe.png)
 
 ### 2. Regional Temperature Analysis
+
+#### Chicago vs New Zealand
+
+**Query:** Compare temperature projections for Chicago (Northern Hemisphere) vs New Zealand (Southern Hemisphere).
+
+**Scripts:** `run_regional_chicago_nz.py`
+
+![Chicago vs NZ](Artifacts/temperature_chicago_nz.png)
+
+#### Oak Ridge vs Livermore
 
 **Query:** Compare temperature projections for Oak Ridge, TN vs Livermore, CA (DOE national lab locations).
 
