@@ -11,6 +11,24 @@ This project demonstrates:
 
 **Data Sources:** Argonne National Lab (ALCF) and Oak Ridge National Lab (ORNL)
 
+## LLM Model Used
+
+This project was developed interactively using **Claude Opus 4.5** via [Claude Code](https://claude.com/claude-code), Anthropic's CLI tool for software engineering tasks. The entire workflow—from initial exploration of ESGF data access patterns, through code generation, to analysis and visualization—was driven by natural language conversation with the model.
+
+## Session Queries
+
+The following natural language queries drove the analyses in this project:
+
+| Query | Result |
+|-------|--------|
+| *"Suggest an example analysis that will access multiple datasets but not be too expensive"* | Global temperature projections comparing 5 CMIP6 models under SSP1-2.6 vs SSP5-8.5 |
+| *"I want to repeat the analysis but focusing just on Chicago and New Zealand"* | Regional temperature comparison between Northern and Southern Hemisphere locations |
+| *"Repeat for Oak Ridge and Livermore"* | Temperature projections at DOE national lab locations |
+| *"Same y-axis range for both graphs"* | Consistent 6-24°C scale across all 4 regional plots |
+| *"How will GPP change in the future compared to now, using CESM2 and ssp585?"* | GPP change analysis showing +44% global increase, +99% in Arctic |
+| *"Can you create global maps for them?"* | Regional GPP maps by climate zone |
+| *"Create a table of all CMIP6 run datasets that are at Argonne and ORNL"* | `doe_cmip6_holdings.json` inventory (~11.6M datasets) |
+
 ## Installation
 
 ```bash
