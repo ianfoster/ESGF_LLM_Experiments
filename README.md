@@ -59,7 +59,7 @@ ESGF_LLM_Experiments/
 
 **Results:** Warming by 2100 ranges from +3.0°C (GFDL-ESM4) to +5.7°C (UKESM1-0-LL) under SSP5-8.5.
 
-![Temperature Projections](temperature_combined_doe.png)
+![Temperature Projections](Artifacts/temperature_combined_doe.png)
 
 ### 2. Regional Temperature Analysis
 
@@ -67,7 +67,7 @@ ESGF_LLM_Experiments/
 
 **Scripts:** `run_regional_analysis.py`
 
-![Regional Temperature](temperature_regional.png)
+![Regional Temperature](Artifacts/temperature_regional.png)
 
 ### 3. GPP (Gross Primary Production) Change
 
@@ -88,9 +88,9 @@ ESGF_LLM_Experiments/
 | Tropics | 4.12 | 5.39 | +31% |
 | Southern mid-lat | 2.53 | 4.10 | +62% |
 
-![GPP Change](gpp_change_cesm2.png)
+![GPP Change](Artifacts/gpp_change_cesm2.png)
 
-![GPP Regional Maps](gpp_regional_maps.png)
+![GPP Regional Maps](Artifacts/gpp_regional_maps.png)
 
 ## ESGF Client Usage
 
