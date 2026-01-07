@@ -196,12 +196,9 @@ def main():
         ax.grid(True, alpha=0.3)
         ax.set_xlim(2015, 2100)
 
-    # Set same y-axis range for both plots
-    all_ylims = [ax.get_ylim() for ax in axes]
-    y_min = min(ylim[0] for ylim in all_ylims)
-    y_max = max(ylim[1] for ylim in all_ylims)
+    # Set same y-axis range for all regional plots (consistent across scripts)
     for ax in axes:
-        ax.set_ylim(y_min, y_max)
+        ax.set_ylim(6, 24)
 
     # Add scenario labels after setting ylim
     for ax in axes:
