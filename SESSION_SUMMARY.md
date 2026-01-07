@@ -6,6 +6,7 @@ This project explores using Large Language Models (LLMs) to interact with climat
 
 **Date:** January 7, 2026
 **Data Sources:** Argonne National Lab (ALCF) + Oak Ridge National Lab (ORNL)
+**GitHub:** https://github.com/ianfoster/ESGF_LLM_Experiments
 
 ---
 
@@ -47,10 +48,14 @@ response = assistant.search("Find monthly precipitation data from the high emiss
 
 | Script | Description |
 |--------|-------------|
-| `examples/run_temperature_doe.py` | Downloads from Argonne, analyzes 3 models |
-| `examples/run_temperature_ornl.py` | Downloads from Oak Ridge, analyzes 2 models |
-| `examples/plot_combined.py` | Combined visualization of all 5 models |
-| `examples/test_client.py` | Basic ESGF client test |
+| `run_temperature_doe.py` | Downloads from Argonne, analyzes 3 models |
+| `run_temperature_ornl.py` | Downloads from Oak Ridge, analyzes 2 models |
+| `plot_combined.py` | Combined visualization of all 5 models |
+| `run_regional_chicago_nz.py` | Regional analysis: Chicago vs New Zealand |
+| `run_regional_analysis.py` | Regional analysis: Oak Ridge vs Livermore |
+| `run_gpp_analysis.py` | GPP change analysis (CESM2 SSP5-8.5) |
+| `plot_gpp_regions.py` | Regional GPP change maps |
+| `test_client.py` | Basic ESGF client test |
 
 ---
 
@@ -80,7 +85,9 @@ Full inventory saved to: `doe_cmip6_holdings.json`
 
 ## Analysis Results
 
-### Models Analyzed
+### 1. Global Temperature Projections
+
+**Models Analyzed:**
 
 | Model | Institution | Source | Data Size |
 |-------|-------------|--------|-----------|
@@ -90,9 +97,7 @@ Full inventory saved to: `doe_cmip6_holdings.json`
 | GISS-E2-1-H | NASA GISS (USA) | Oak Ridge | 605 MB |
 | UKESM1-0-LL | UK Met Office | Oak Ridge | 533 MB |
 
-**Total Downloaded:** ~1.6 GB
-
-### Global Temperature Projections (2015-2100)
+**Warming by 2100 (relative to 2015-2025):**
 
 | Model | SSP1-2.6 (Low) | SSP5-8.5 (High) | Climate Sensitivity |
 |-------|----------------|-----------------|---------------------|
@@ -102,23 +107,60 @@ Full inventory saved to: `doe_cmip6_holdings.json`
 | GISS-E2-1-H | +0.9°C | +3.6°C | Medium |
 | UKESM1-0-LL | +1.4°C | +5.7°C | High |
 
-**Key Finding:** Model spread of +3.0°C to +5.7°C under SSP5-8.5 represents structural uncertainty in climate sensitivity across modeling centers.
+**Key Finding:** Model spread of +3.0°C to +5.7°C under SSP5-8.5 represents structural uncertainty in climate sensitivity.
+
+### 2. Regional Temperature Analysis
+
+Two regional comparisons with consistent y-axis scaling (6-24°C):
+
+**Chicago vs New Zealand:**
+- Chicago shows stronger warming (+4-8°C under SSP5-8.5)
+- New Zealand more moderate (+2-4°C), buffered by Southern Ocean
+
+**Oak Ridge vs Livermore (DOE Lab locations):**
+- Both show similar warming patterns
+- Livermore slightly warmer baseline due to California climate
+
+### 3. GPP (Gross Primary Production) Change
+
+**Query:** How will vegetation productivity change by end of century under SSP5-8.5?
+
+**Configuration:**
+- Model: CESM2 (r11i1p1f1)
+- Variable: GPP (Lmon table)
+- Present: 1995-2014
+- Future: 2081-2100
+
+**Results:**
+
+| Region | Present | Future | Change |
+|--------|---------|--------|--------|
+| Global land mean | 2.71 | 3.91 g C m⁻² day⁻¹ | +44% |
+| Arctic (>60°N) | 1.60 | 3.18 | +99% |
+| Northern mid-lat (30-60°N) | 1.85 | 3.01 | +62% |
+| Tropics (23°S-23°N) | 4.12 | 5.39 | +31% |
+| Southern mid-lat (30-60°S) | 2.53 | 4.10 | +62% |
+
+**Key Findings:**
+- CO₂ fertilization drives global GPP increase (+44%)
+- Arctic shows largest relative increase (+99%) due to longer growing seasons
+- Some tropical regions (Amazon, Congo) show GPP *decline* due to heat/drought stress
 
 ---
 
 ## Generated Outputs
 
-### Plots
+All plots are in the `Artifacts/` directory:
 
-1. **`temperature_combined_doe.png`** - All 5 models from both DOE centers
-2. **`temperature_doe.png`** - Argonne models (GFDL-ESM4, MIROC6, NorESM2-LM)
-3. **`temperature_ornl.png`** - Oak Ridge models (GISS-E2-1-H, UKESM1-0-LL)
-
-### Data Files
-
-- `doe_cmip6_holdings.json` - Complete inventory of CMIP6 at DOE centers
-- `data/doe_nodes/` - Downloaded NetCDF files from Argonne
-- `data/ornl/` - Downloaded NetCDF files from Oak Ridge
+| File | Description |
+|------|-------------|
+| `temperature_combined_doe.png` | All 5 models, global mean temperature |
+| `temperature_chicago_nz.png` | Regional: Chicago vs New Zealand |
+| `temperature_regional.png` | Regional: Oak Ridge vs Livermore |
+| `gpp_change_cesm2.png` | GPP change maps (4-panel) |
+| `gpp_regional_maps.png` | GPP by climate zone |
+| `temperature_doe.png` | Argonne models only |
+| `temperature_ornl.png` | Oak Ridge models only |
 
 ---
 
@@ -129,7 +171,7 @@ Full inventory saved to: `doe_cmip6_holdings.json`
 1. **Globus HTTPS is publicly accessible** - No authentication required for downloads
 2. **ESGF Search API is reliable** - Consistent across all index nodes
 3. **Single-file datasets are efficient** - GFDL-ESM4 and MIROC6 provide full 2015-2100 in one file
-4. **Pangeo Cloud catalog** - Most reliable for analysis (Zarr on GCS)
+4. **xarray + dask** - Handles multi-file datasets seamlessly
 
 ### Challenges Encountered
 
@@ -142,7 +184,6 @@ Full inventory saved to: `doe_cmip6_holdings.json`
 
 | Use Case | Recommended Approach |
 |----------|---------------------|
-| Quick analysis | Pangeo Cloud catalog (intake-esm + Zarr) |
 | Specific DOE data | Direct HTTPS from Argonne/ORNL |
 | Bulk downloads | Globus transfer |
 | Data discovery | ESGF Search API |
@@ -156,30 +197,33 @@ Full inventory saved to: `doe_cmip6_holdings.json`
 ```bash
 cd ESGF_LLM_Experiments
 pip install -e .
-pip install xarray netCDF4 matplotlib intake-esm gcsfs
+pip install xarray netCDF4 matplotlib requests
 ```
 
-### Run Analysis
+For the LLM interface (optional):
+```bash
+pip install anthropic
+export ANTHROPIC_API_KEY=your_key
+```
+
+### Run Analyses
 
 ```bash
 # Test ESGF client
 python examples/test_client.py
 
-# Download from Argonne and analyze
+# Global temperature analysis
 python examples/run_temperature_doe.py
-
-# Download from Oak Ridge and analyze
 python examples/run_temperature_ornl.py
-
-# Generate combined plot
 python examples/plot_combined.py
-```
 
-### Use LLM Interface (requires Anthropic API key)
+# Regional temperature analysis
+python examples/run_regional_chicago_nz.py
+python examples/run_regional_analysis.py
 
-```bash
-export ANTHROPIC_API_KEY=your_key
-python examples/llm_search.py
+# GPP change analysis
+python examples/run_gpp_analysis.py
+python examples/plot_gpp_regions.py
 ```
 
 ---
@@ -188,38 +232,35 @@ python examples/llm_search.py
 
 ```
 ESGF_LLM_Experiments/
-├── pyproject.toml              # Dependencies
+├── README.md
+├── SESSION_SUMMARY.md          # This file
+├── pyproject.toml
+├── doe_cmip6_holdings.json     # Full DOE CMIP6 inventory
 ├── src/esgf_llm/
 │   ├── __init__.py
 │   ├── esgf_client.py          # ESGF Search API client
-│   └── llm_interface.py        # Claude-powered natural language interface
+│   └── llm_interface.py        # Claude-powered interface
 ├── examples/
 │   ├── test_client.py          # Basic API test
-│   ├── run_temperature_doe.py  # Argonne analysis
-│   ├── run_temperature_ornl.py # Oak Ridge analysis
-│   ├── plot_combined.py        # Combined visualization
+│   ├── run_temperature_doe.py  # Temperature (Argonne)
+│   ├── run_temperature_ornl.py # Temperature (Oak Ridge)
+│   ├── plot_combined.py        # Combined 5-model plot
+│   ├── run_regional_chicago_nz.py   # Chicago vs NZ
+│   ├── run_regional_analysis.py     # Oak Ridge vs Livermore
+│   ├── run_gpp_analysis.py     # GPP change analysis
+│   ├── plot_gpp_regions.py     # Regional GPP maps
 │   └── llm_search.py           # LLM demo
-├── data/
-│   ├── doe_nodes/              # Argonne downloads
-│   ├── ornl/                   # Oak Ridge downloads
-│   └── argonne/                # Additional Argonne data
-├── doe_cmip6_holdings.json     # Full DOE inventory
-├── temperature_combined_doe.png
-├── temperature_doe.png
-├── temperature_ornl.png
-└── SESSION_SUMMARY.md          # This file
+├── Artifacts/                  # Generated plots
+│   ├── temperature_combined_doe.png
+│   ├── temperature_chicago_nz.png
+│   ├── temperature_regional.png
+│   ├── gpp_change_cesm2.png
+│   └── gpp_regional_maps.png
+└── data/                       # Downloaded NetCDF files (not in repo)
+    ├── doe_nodes/
+    ├── ornl/
+    └── gpp/
 ```
-
----
-
-## Next Steps
-
-Potential extensions:
-1. **Other variables** - Precipitation (pr), sea ice (siconc), sea level (zos)
-2. **Regional analysis** - Subset by lat/lon for specific regions
-3. **Multi-model ensemble** - Compute ensemble mean and spread
-4. **Tool use** - Give Claude tools to search, download, and analyze autonomously
-5. **Visualization dashboard** - Interactive plots with Panel or Streamlit
 
 ---
 
@@ -227,6 +268,6 @@ Potential extensions:
 
 - [ESGF Search API](https://esgf.github.io/esgf-user-support/search_api.html)
 - [CMIP6 Data Access](https://wcrp-cmip.org/cmip-data-access/)
-- [Pangeo CMIP6 Catalog](https://pangeo-data.github.io/pangeo-cmip6-cloud/)
 - [Argonne ALCF](https://www.alcf.anl.gov/)
 - [Oak Ridge ORNL](https://www.ornl.gov/)
+- [GitHub Repository](https://github.com/ianfoster/ESGF_LLM_Experiments)
