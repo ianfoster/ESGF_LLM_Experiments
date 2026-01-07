@@ -1,0 +1,29 @@
+# Data files (too large for git)
+data/
+*.nc
+
+# Credentials
+TOKEN
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+
+# Claude Code
+.claude/
+
+# OS
+.DS_Store
+
+# Pangeo-related (not using)
+examples/run_temperature_analysis.py
+examples/temperature_comparison.py

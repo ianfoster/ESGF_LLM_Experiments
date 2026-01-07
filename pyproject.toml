@@ -1,0 +1,25 @@
+[project]
+name = "esgf-llm"
+version = "0.1.0"
+description = "LLM-powered interface for ESGF climate data discovery and analysis"
+requires-python = ">=3.10"
+dependencies = [
+    "requests>=2.31.0",
+    "xarray>=2024.1.0",
+    "netCDF4>=1.6.0",
+    "pandas>=2.0.0",
+    "pydantic>=2.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "ipython>=8.0.0",
+]
+llm = [
+    "anthropic>=0.40.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
