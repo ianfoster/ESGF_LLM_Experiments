@@ -57,6 +57,8 @@ ESGF_LLM_Experiments/
 | GISS-E2-1-H | NASA GISS (USA) | Oak Ridge |
 | UKESM1-0-LL | UK Met Office | Oak Ridge |
 
+**Scripts:** `run_temperature_doe.py`, `run_temperature_ornl.py`, `plot_combined.py`
+
 **Results:** Warming by 2100 ranges from +3.0°C (GFDL-ESM4) to +5.7°C (UKESM1-0-LL) under SSP5-8.5.
 
 ![Temperature Projections](Artifacts/temperature_combined_doe.png)
@@ -87,6 +89,8 @@ ESGF_LLM_Experiments/
 | Northern mid-lat | 1.85 | 3.01 | +62% |
 | Tropics | 4.12 | 5.39 | +31% |
 | Southern mid-lat | 2.53 | 4.10 | +62% |
+
+**Scripts:** `run_gpp_analysis.py`, `plot_gpp_regions.py`
 
 ![GPP Change](Artifacts/gpp_change_cesm2.png)
 
