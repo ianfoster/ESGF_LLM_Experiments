@@ -7,6 +7,17 @@ This project explores using Large Language Models (LLMs) to interact with climat
 **Date:** January 7, 2026
 **Data Sources:** Argonne National Lab (ALCF) + Oak Ridge National Lab (ORNL)
 **GitHub:** https://github.com/ianfoster/ESGF_LLM_Experiments
+**LLM:** Claude Opus 4.5 via [Claude Code](https://claude.com/claude-code)
+
+### Estimated Session Cost
+
+| Token Type | Usage (est.) | Rate | Cost |
+|------------|--------------|------|------|
+| Input | ~250,000 | $15/1M | ~$3.75 |
+| Output | ~65,000 | $75/1M | ~$4.88 |
+| **Total** | | | **~$8-10** |
+
+Output: ~2,500 lines of code, ~1.8 GB climate data analyzed, 8 publication-ready figures.
 
 ---
 

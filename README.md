@@ -15,6 +15,16 @@ This project demonstrates:
 
 This project was developed interactively using **Claude Opus 4.5** via [Claude Code](https://claude.com/claude-code), Anthropic's CLI tool for software engineering tasks. The entire workflow—from initial exploration of ESGF data access patterns, through code generation, to analysis and visualization—was driven by natural language conversation with the model.
 
+### Estimated Cost
+
+| Token Type | Usage (est.) | Rate | Cost |
+|------------|--------------|------|------|
+| Input | ~250,000 | $15/1M | ~$3.75 |
+| Output | ~65,000 | $75/1M | ~$4.88 |
+| **Total** | | | **~$8-10** |
+
+The session produced ~2,500 lines of working code, analyzed ~1.8 GB of climate data, and generated publication-ready figures.
+
 ## Session Queries
 
 The following natural language queries drove the analyses in this project:
