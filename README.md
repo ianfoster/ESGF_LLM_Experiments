@@ -27,7 +27,11 @@ The session produced ~2,500 lines of working code, analyzed ~1.8 GB of climate d
 
 ## Session Queries
 
-The following natural language queries drove the analyses in this project:
+The following natural language queries drove the analyses in this project.
+
+I started with *I want to explore the use of LLMs to analyze data maintained by the Earth System Grid Federation. That will 
+require you to know what ESGF is; how to access its holdings; and what interesting questions can be used. What do 
+you think?* which led to the generation of some initial code. I followed up with the following. (Not listed are a few "*plot this*" or similar requests plus one to "*consider only datasets at Argonne or Oak Ridge*" [because it had problems with some other ESGF sites] and a final "*I want to commit the code that we have written to GitHub with a README that describes it briefly and details the queries performed and the pictures generated.*). 
 
 | Query | Result |
 |-------|--------|
