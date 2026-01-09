@@ -1,0 +1,88 @@
+{
+  "analysis": "Teleconnection Analysis - Synchronized Compound Events",
+  "model": "GFDL-ESM4",
+  "regions_analyzed": [
+    "Amazon",
+    "Sahel",
+    "Southern_Africa",
+    "Mediterranean",
+    "South_Asia",
+    "East_Asia",
+    "Australia",
+    "US_Midwest",
+    "US_Southwest",
+    "Southern_Europe"
+  ],
+  "findings": {
+    "mean_correlation": {
+      "historical": 0.023,
+      "future": 0.026,
+      "change": 0.004
+    },
+    "synchronized_events": {
+      "3_plus_regions": {
+        "historical_pct": 0.64,
+        "future_pct": 36.33,
+        "increase_pct": 5568.0
+      },
+      "5_plus_regions": {
+        "historical_pct": 0.0,
+        "future_pct": 5.5
+      }
+    },
+    "top_correlated_pairs_historical": [
+      [
+        "Mediterranean",
+        "Southern_Europe",
+        0.811
+      ],
+      [
+        "Mediterranean",
+        "US_Midwest",
+        0.136
+      ],
+      [
+        "Sahel",
+        "US_Midwest",
+        0.112
+      ],
+      [
+        "US_Midwest",
+        "Southern_Europe",
+        0.097
+      ],
+      [
+        "East_Asia",
+        "Southern_Europe",
+        0.069
+      ]
+    ],
+    "top_correlated_pairs_future": [
+      [
+        "Mediterranean",
+        "Southern_Europe",
+        0.847
+      ],
+      [
+        "Sahel",
+        "Mediterranean",
+        0.186
+      ],
+      [
+        "Sahel",
+        "Southern_Europe",
+        0.176
+      ],
+      [
+        "Amazon",
+        "Southern_Africa",
+        0.174
+      ],
+      [
+        "US_Midwest",
+        "US_Southwest",
+        0.142
+      ]
+    ]
+  }
+}
