@@ -1,0 +1,34 @@
+{
+  "analysis": "Consecutive Compound Event Analysis",
+  "models": [
+    "GFDL-ESM4",
+    "MIROC6"
+  ],
+  "thresholds_months": [
+    2,
+    3,
+    6
+  ],
+  "findings": {
+    "2_month_events": {
+      "historical_per_decade": 0.13,
+      "future_per_decade": 2.67,
+      "percent_increase": 1908.0
+    },
+    "3_month_events": {
+      "historical_per_decade": 0.02,
+      "future_per_decade": 0.79,
+      "percent_increase": 4320.1
+    },
+    "6_month_events": {
+      "historical_per_decade": 0.0,
+      "future_per_decade": 0.05,
+      "percent_increase": 42324.3
+    },
+    "mean_event_length": {
+      "historical_months": 0.98,
+      "future_months": 1.26,
+      "increase_months": 0.29
+    }
+  }
+}

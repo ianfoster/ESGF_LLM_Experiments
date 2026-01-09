@@ -1,0 +1,46 @@
+{
+  "analysis": "Seasonal Compound Hazard Breakdown",
+  "models": [
+    "GFDL-ESM4",
+    "MIROC6",
+    "NorESM2-LM"
+  ],
+  "seasons": {
+    "DJF": "Dec-Jan-Feb",
+    "MAM": "Mar-Apr-May",
+    "JJA": "Jun-Jul-Aug",
+    "SON": "Sep-Oct-Nov"
+  },
+  "findings": {
+    "DJF": {
+      "historical_frequency": 1.33,
+      "future_frequency": 12.27,
+      "absolute_increase_pp": 10.95,
+      "percent_increase": 826.2
+    },
+    "MAM": {
+      "historical_frequency": 1.42,
+      "future_frequency": 12.46,
+      "absolute_increase_pp": 11.05,
+      "percent_increase": 778.4
+    },
+    "JJA": {
+      "historical_frequency": 1.65,
+      "future_frequency": 14.79,
+      "absolute_increase_pp": 13.14,
+      "percent_increase": 796.8
+    },
+    "SON": {
+      "historical_frequency": 1.53,
+      "future_frequency": 14.26,
+      "absolute_increase_pp": 12.73,
+      "percent_increase": 833.2
+    }
+  },
+  "key_finding": {
+    "most_affected_season": "JJA",
+    "season_name": "Jun-Jul-Aug",
+    "increase": 13.14,
+    "interpretation": "The Jun-Jul-Aug season sees the largest increase in compound events"
+  }
+}

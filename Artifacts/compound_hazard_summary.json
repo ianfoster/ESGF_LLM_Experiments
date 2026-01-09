@@ -1,0 +1,48 @@
+{
+  "hypothesis": "Climate change disproportionately increases compound heat-drought events",
+  "models_analyzed": [
+    "GFDL-ESM4",
+    "MIROC6",
+    "NorESM2-LM"
+  ],
+  "models_with_complete_data": [
+    "GFDL-ESM4",
+    "MIROC6",
+    "NorESM2-LM"
+  ],
+  "scenarios": [
+    "historical",
+    "ssp585"
+  ],
+  "thresholds": {
+    "heat": ">90th percentile",
+    "drought": "<10th percentile"
+  },
+  "findings": {
+    "global_compound_increase": {
+      "mean_percent": 833.1223926293527,
+      "range_percent": [
+        657.3684448597083,
+        1055.2800366957085
+      ],
+      "interpretation": "Percent increase in compound events from historical to end-century"
+    },
+    "amplification_factor": {
+      "mean": 0.9976935436558518,
+      "range": [
+        0.9588527330183173,
+        1.0212505468969673
+      ],
+      "interpretation": "Ratio of actual to expected compound frequency (>1 means positive correlation)"
+    },
+    "nonlinearity_ratio": {
+      "mean": 0.9782709073871628,
+      "range": [
+        0.9638222349916207,
+        0.9956553283879078
+      ],
+      "interpretation": "Ratio of actual to expected increase (>1 supports nonlinearity hypothesis)"
+    }
+  },
+  "hypothesis_verdict": "NOT SUPPORTED - Compound risk increases proportionally to individual hazards"
+}

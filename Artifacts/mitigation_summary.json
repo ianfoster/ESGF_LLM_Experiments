@@ -1,0 +1,26 @@
+{
+  "analysis": "Mitigation Benefit: SSP1-2.6 vs SSP5-8.5",
+  "models": [
+    "GFDL-ESM4",
+    "MIROC6"
+  ],
+  "scenarios_compared": {
+    "ssp126": "Low emissions - Paris Agreement aligned",
+    "ssp585": "High emissions - Fossil-fueled development"
+  },
+  "findings": {
+    "mid_century": {
+      "ssp585_frequency": 9.3,
+      "ssp126_frequency": 5.77,
+      "avoided_pp": 3.52,
+      "avoided_percent": 37.8
+    },
+    "end_century": {
+      "ssp585_frequency": 13.4,
+      "ssp126_frequency": 5.8,
+      "avoided_pp": 7.59,
+      "avoided_percent": 56.6
+    }
+  },
+  "key_message": "Climate mitigation (SSP1-2.6 vs SSP5-8.5) avoids 57% of compound heat-drought risk by end of century"
+}
