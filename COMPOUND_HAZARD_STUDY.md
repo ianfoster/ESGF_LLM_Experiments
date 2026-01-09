@@ -87,6 +87,9 @@ This definition captures months that are simultaneously anomalously hot AND anom
 
 **Finding**: Compound events increase by **8-10x** globally under SSP5-8.5.
 
+![Global Compound Risk Change](Artifacts/compound_global_map.png)
+*Figure 1: Global change in compound heat-drought frequency (SSP5-8.5, 2070-2099 minus 1995-2014)*
+
 ---
 
 ### 3.2 Experiment 2: Non-Linearity Test
@@ -128,6 +131,9 @@ This definition captures months that are simultaneously anomalously hot AND anom
 
 **Finding**: The **Amazon Basin** emerges as the most extreme global hotspot, with some areas experiencing compound events >60 percentage points more often than historical.
 
+![Regional Hotspots](Artifacts/compound_hazard_regional.png)
+*Figure 2: Regional compound heat-drought risk hotspots showing change from historical to end-century*
+
 ---
 
 ### 3.4 Experiment 4: Seasonal Analysis
@@ -146,6 +152,12 @@ This definition captures months that are simultaneously anomalously hot AND anom
 | Sep-Oct-Nov | 1.53% | 14.26% | +12.73 pp | +833% |
 
 **Finding**: **Summer (JJA)** sees the largest absolute increase (+13.1 pp), which is critical because this coincides with the Northern Hemisphere growing season. No season escapes major increases.
+
+![Seasonal Analysis](Artifacts/compound_hazard_seasonal.png)
+*Figure 3: Seasonal distribution of compound events and changes by season*
+
+![Seasonal Global Maps](Artifacts/seasonal_maps_coastlines.png)
+*Figure 4: Global seasonal compound event changes for NH summer (JJA) and SH summer (DJF)*
 
 ---
 
@@ -174,6 +186,12 @@ This definition captures months that are simultaneously anomalously hot AND anom
 **Key Finding**: Under SSP1-2.6, compound risk **stabilizes** at ~5.8% from mid-century onward (flat trajectory), while SSP5-8.5 continues climbing to 13.4%. **Climate mitigation doesn't just slow the increase—it stops it.**
 
 **Finding**: **57% of end-century compound risk is avoidable** through emissions reductions. The regions facing the greatest risk (Amazon, Southern Africa) also benefit most from mitigation.
+
+![Mitigation Comparison](Artifacts/mitigation_comparison.png)
+*Figure 5: Comparison of compound risk under SSP5-8.5 vs SSP1-2.6 scenarios*
+
+![Regional Mitigation Benefits](Artifacts/mitigation_regional.png)
+*Figure 6: Regional mitigation benefits showing avoided compound risk*
 
 ---
 
@@ -205,6 +223,12 @@ This definition captures months that are simultaneously anomalously hot AND anom
 | Australia | +0.01 |
 
 **Finding**: Multi-month compound events **explode** in frequency. Events lasting 6+ months—essentially non-existent in the historical climate—become a real phenomenon. The Amazon gains nearly **2 additional half-year compound droughts per decade**.
+
+![Consecutive Events Analysis](Artifacts/consecutive_events.png)
+*Figure 7: Multi-month compound event frequency and persistence changes*
+
+![Regional Consecutive Events](Artifacts/consecutive_regional.png)
+*Figure 8: Regional changes in 6+ month compound events*
 
 ---
 
