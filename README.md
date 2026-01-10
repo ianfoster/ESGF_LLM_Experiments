@@ -17,10 +17,10 @@ This project includes four in-depth climate research studies analyzing compound 
 
 | Study | Key Finding | Full Report |
 |-------|-------------|-------------|
-| **[Compound Heat-Drought Events](#4-compound-heat-drought-events)** | 8-10x increase by 2100; Amazon most vulnerable | [COMPOUND_HAZARD_STUDY.md](COMPOUND_HAZARD_STUDY.md) |
-| **[Teleconnection Analysis](#5-teleconnection-analysis-synchronized-global-events)** | 56x increase in synchronized multi-region events | [TELECONNECTION_STUDY.md](TELECONNECTION_STUDY.md) |
-| **[Human Heat Stress](#6-human-heat-stress-wet-bulb-temperature)** | 3 billion people face routine dangerous heat | [HEAT_STRESS_STUDY.md](HEAT_STRESS_STUDY.md) |
-| **[Agricultural Impact](#7-agricultural-impact-winners-and-losers)** | High-latitude winners, tropical losers | [AGRICULTURAL_IMPACT_STUDY.md](AGRICULTURAL_IMPACT_STUDY.md) |
+| **[Compound Heat-Drought Events](#4-compound-heat-drought-events)** | 8-10x increase by 2100; Amazon most vulnerable | [studies/COMPOUND_HAZARD_STUDY.md](studies/COMPOUND_HAZARD_STUDY.md) |
+| **[Teleconnection Analysis](#5-teleconnection-analysis-synchronized-global-events)** | 56x increase in synchronized multi-region events | [studies/TELECONNECTION_STUDY.md](studies/TELECONNECTION_STUDY.md) |
+| **[Human Heat Stress](#6-human-heat-stress-wet-bulb-temperature)** | 3 billion people face routine dangerous heat | [studies/HEAT_STRESS_STUDY.md](studies/HEAT_STRESS_STUDY.md) |
+| **[Agricultural Impact](#7-agricultural-impact-winners-and-losers)** | High-latitude winners, tropical losers | [studies/AGRICULTURAL_IMPACT_STUDY.md](studies/AGRICULTURAL_IMPACT_STUDY.md) |
 
 ## LLM Model Used
 
@@ -216,7 +216,7 @@ The following in-depth studies were conducted as follow-up exploration, investig
 
 **Scripts:** `run_compound_hazard_analysis.py`, `run_seasonal_compound_analysis.py`, `run_consecutive_events.py`
 
-**Full Study:** [COMPOUND_HAZARD_STUDY.md](COMPOUND_HAZARD_STUDY.md)
+**Full Study:** [studies/COMPOUND_HAZARD_STUDY.md](studies/COMPOUND_HAZARD_STUDY.md)
 
 ![Compound Hazard](Artifacts/compound_global_map.png)
 
@@ -239,7 +239,7 @@ The synchronization explosion is NOT due to stronger teleconnections (correlatio
 
 **Scripts:** `run_teleconnection_analysis.py`
 
-**Full Study:** [TELECONNECTION_STUDY.md](TELECONNECTION_STUDY.md)
+**Full Study:** [studies/TELECONNECTION_STUDY.md](studies/TELECONNECTION_STUDY.md)
 
 ![Teleconnection](Artifacts/teleconnection_analysis.png)
 
@@ -263,7 +263,7 @@ Wet Bulb Temperature (WBT) combines temperature and humidity—the key metric fo
 
 **Scripts:** `run_heat_stress_analysis.py`
 
-**Full Study:** [HEAT_STRESS_STUDY.md](HEAT_STRESS_STUDY.md)
+**Full Study:** [studies/HEAT_STRESS_STUDY.md](studies/HEAT_STRESS_STUDY.md)
 
 ![Heat Stress](Artifacts/heat_stress_global.png)
 
@@ -288,7 +288,7 @@ High-latitude breadbaskets gain growing capacity while tropical regions face cat
 
 **Scripts:** `run_agricultural_impact.py`
 
-**Full Study:** [AGRICULTURAL_IMPACT_STUDY.md](AGRICULTURAL_IMPACT_STUDY.md)
+**Full Study:** [studies/AGRICULTURAL_IMPACT_STUDY.md](studies/AGRICULTURAL_IMPACT_STUDY.md)
 
 ![Agricultural Impact](Artifacts/agricultural_global.png)
 
