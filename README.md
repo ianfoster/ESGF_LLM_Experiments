@@ -221,7 +221,7 @@ response = assistant.search("Find monthly precipitation data from the high emiss
 
 ## Extended Research Studies
 
-The following in-depth studies were conducted as follow-up exploration, investigating compound climate hazards and their societal impacts using ~2.5 GB of CMIP6 data. These are four of 10 suggested by Claude in response to the query: "**What ideas might you have for further studies?**"
+The following in-depth studies were conducted as follow-up exploration, investigating compound climate hazards and their societal impacts using ~2.5 GB of CMIP6 data. The prompt was simple: **"I now want to operate more broadly to conduct open-ended research with ESGF. Come up with some hypothesis and then work with ESGF data to explore that hypothesis. Something really innovative."** These are four of 10 studies suggested by Claude.
 
 ### 4. Compound Heat-Drought Events
 
