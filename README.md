@@ -11,6 +11,17 @@ This project demonstrates:
 
 **Data Sources:** Argonne National Lab (ALCF) and Oak Ridge National Lab (ORNL)
 
+## Research Studies
+
+This project includes four in-depth climate research studies analyzing compound hazards and societal impacts:
+
+| Study | Key Finding | Full Report |
+|-------|-------------|-------------|
+| **[Compound Heat-Drought Events](#4-compound-heat-drought-events)** | 8-10x increase by 2100; Amazon most vulnerable | [COMPOUND_HAZARD_STUDY.md](COMPOUND_HAZARD_STUDY.md) |
+| **[Teleconnection Analysis](#5-teleconnection-analysis-synchronized-global-events)** | 56x increase in synchronized multi-region events | [TELECONNECTION_STUDY.md](TELECONNECTION_STUDY.md) |
+| **[Human Heat Stress](#6-human-heat-stress-wet-bulb-temperature)** | 3 billion people face routine dangerous heat | [HEAT_STRESS_STUDY.md](HEAT_STRESS_STUDY.md) |
+| **[Agricultural Impact](#7-agricultural-impact-winners-and-losers)** | High-latitude winners, tropical losers | [AGRICULTURAL_IMPACT_STUDY.md](AGRICULTURAL_IMPACT_STUDY.md) |
+
 ## LLM Model Used
 
 This project was developed interactively using **Claude Opus 4.5** via [Claude Code](https://claude.com/claude-code), Anthropic's CLI tool for software engineering tasks. The entire workflow—from initial exploration of ESGF data access patterns, through code generation, to analysis and visualization—was driven by natural language conversation with the model.
@@ -179,3 +190,117 @@ response = assistant.search("Find monthly precipitation data from the high emiss
 - [CMIP6 Data Access](https://wcrp-cmip.org/cmip-data-access/)
 - [Argonne ALCF](https://www.alcf.anl.gov/)
 - [Oak Ridge ORNL](https://www.ornl.gov/)
+
+---
+
+## Extended Research Studies
+
+The following in-depth studies were conducted as follow-up exploration, investigating compound climate hazards and their societal impacts using ~2.5 GB of CMIP6 data.
+
+### 4. Compound Heat-Drought Events
+
+**Research Question:** Does climate change disproportionately increase compound heat-drought events?
+
+**Methodology:**
+- Define compound events: Temperature > 90th percentile AND precipitation < 10th percentile
+- Compare historical (1995-2014) vs end-century (2070-2099)
+- Test for non-linear amplification
+
+**Key Findings:**
+
+| Metric | Historical | End-Century | Change |
+|--------|------------|-------------|--------|
+| Global compound frequency | 1.5% | 13.5% | **+800%** |
+| Amazon Basin | 2% | 39% | +37 pp |
+| Multi-month (3+) events | 0.02/decade | 0.79/decade | **40x** |
+
+**Scripts:** `run_compound_hazard_analysis.py`, `run_seasonal_compound_analysis.py`, `run_consecutive_events.py`
+
+**Full Study:** [COMPOUND_HAZARD_STUDY.md](COMPOUND_HAZARD_STUDY.md)
+
+![Compound Hazard](Artifacts/compound_global_map.png)
+
+---
+
+### 5. Teleconnection Analysis: Synchronized Global Events
+
+**Research Question:** Do compound events in distant regions co-occur, creating cascading global impacts?
+
+**Key Findings:**
+
+| Metric | Historical | End-Century | Change |
+|--------|------------|-------------|--------|
+| 3+ regions simultaneous | 0.6% | 36.3% | **56x increase** |
+| 5+ regions simultaneous | 0% | 5.5% | New phenomenon |
+
+The synchronization explosion is NOT due to stronger teleconnections (correlations remain ~0.02) but purely probabilistic—when each region's risk rises from 2% to 20%, simultaneous events emerge mathematically.
+
+**Implication:** Global food security systems designed for single-region failures will face multi-breadbasket synchronization.
+
+**Scripts:** `run_teleconnection_analysis.py`
+
+**Full Study:** [TELECONNECTION_STUDY.md](TELECONNECTION_STUDY.md)
+
+![Teleconnection](Artifacts/teleconnection_analysis.png)
+
+---
+
+### 6. Human Heat Stress: Wet Bulb Temperature
+
+**Research Question:** How do dangerous heat stress conditions change under climate change?
+
+Wet Bulb Temperature (WBT) combines temperature and humidity—the key metric for human physiological heat tolerance. At WBT = 35°C, the human body cannot cool itself.
+
+**Key Findings:**
+
+| Region | Historical (>26°C) | End-Century | Change |
+|--------|-------------------|-------------|--------|
+| Global | 0.5% | 17.5% | **35x increase** |
+| Southeast Asia | 2.9% | 65.5% | +62.6 pp |
+| South Asia (1.9B people) | 5.9% | 39.2% | +33.3 pp |
+
+**Implication:** 3 billion people will live in regions where outdoor work is dangerous more than one-third of the year.
+
+**Scripts:** `run_heat_stress_analysis.py`
+
+**Full Study:** [HEAT_STRESS_STUDY.md](HEAT_STRESS_STUDY.md)
+
+![Heat Stress](Artifacts/heat_stress_global.png)
+
+---
+
+### 7. Agricultural Impact: Winners and Losers
+
+**Research Question:** Which agricultural regions gain or lose under climate change?
+
+**Key Findings:**
+
+| Region | GDD Change | Heat Stress | Verdict |
+|--------|------------|-------------|---------|
+| US Corn Belt | +52% | Near zero | **WINNER** |
+| European Breadbasket | +63% | Zero | **WINNER** |
+| African Sahel | +21% | Severe heat **14x** | **LOSER** |
+| Indo-Gangetic Plain | +22% | Severe heat 2x | **LOSER** |
+
+High-latitude breadbaskets gain growing capacity while tropical regions face catastrophic heat stress that overwhelms any GDD benefits.
+
+**Implication:** Climate change will dramatically widen the gap between agricultural haves and have-nots.
+
+**Scripts:** `run_agricultural_impact.py`
+
+**Full Study:** [AGRICULTURAL_IMPACT_STUDY.md](AGRICULTURAL_IMPACT_STUDY.md)
+
+![Agricultural Impact](Artifacts/agricultural_global.png)
+
+---
+
+## Summary of All Studies
+
+| Study | Key Finding | Policy Implication |
+|-------|-------------|-------------------|
+| Compound Hazards | 8-10x increase by 2100 | Multi-hazard planning essential |
+| Teleconnections | 56x increase in synchronized events | Global food reserves needed |
+| Heat Stress | 3B people face routine dangerous heat | Labor law and urban planning reform |
+| Agriculture | Stark winners/losers divide | Food system restructuring required |
+
+**Total Data Analyzed:** ~2.5 GB of CMIP6 model output from DOE data centers
