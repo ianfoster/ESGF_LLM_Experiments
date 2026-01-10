@@ -11,8 +11,8 @@ This project demonstrates:
 
 **Data Sources:** Argonne National Lab (ALCF) and Oak Ridge National Lab (ORNL)
 
-This page describes the set up for the experiments and some simple studies that illustrate how the agent+LLM was used to interact with ESGF. 
-The following table provides pointers to four additional studies analyzing compound hazards and societal impacts:
+This page describes the set up for the experiments and some simple studies that illustrate how the agent+LLM was used to interact with ESGF, including the  
+following analyses of compound hazards and societal impacts:
 
 | Study | Key Finding | Full Report |
 |-------|-------------|-------------|
@@ -22,6 +22,7 @@ The following table provides pointers to four additional studies analyzing compo
 | **[Agricultural Impact](#7-agricultural-impact-winners-and-losers)** | High-latitude winners, tropical losers | [studies/AGRICULTURAL_IMPACT_STUDY.md](studies/AGRICULTURAL_IMPACT_STUDY.md) |
 
 I am not an expert in climate research; apart from some brief framing, the results presented here are all Claude's work.
+Note that all analyses used just monthly, moderate-resolution data.
 
 ## LLM Model Used
 
