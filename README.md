@@ -33,8 +33,7 @@ This project demonstrates:
 
 **Data Sources:** Argonne National Lab (ALCF) and Oak Ridge National Lab (ORNL)
 
-This page describes the set up for the experiments and some simple studies that illustrate how the agent+LLM was used to interact with ESGF, including the  
-following analyses of compound hazards and societal impacts:
+This page describes the set up for the experiments; some simple studies that illustrate how the agent+LLM was used to interact with ESGF; and the following four analyses of compound hazards and societal impacts:
 
 | Study | Key Finding | Full Report |
 |-------|-------------|-------------|
@@ -222,7 +221,7 @@ response = assistant.search("Find monthly precipitation data from the high emiss
 
 ## Extended Research Studies
 
-The following in-depth studies were conducted as follow-up exploration, investigating compound climate hazards and their societal impacts using ~2.5 GB of CMIP6 data.
+The following in-depth studies were conducted as follow-up exploration, investigating compound climate hazards and their societal impacts using ~2.5 GB of CMIP6 data. These are four of 10 suggested by Claude in response to the query: "**What ideas might you have for further studies?**"
 
 ### 4. Compound Heat-Drought Events
 
