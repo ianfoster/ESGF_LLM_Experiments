@@ -142,7 +142,7 @@ The complete analysis is in `examples/run_teleconnection_analysis.py`.
 
 **Key Finding**: Events affecting 5+ regions simultaneously—essentially non-existent in historical climate—occur in 5.5% of future months.
 
-![Teleconnection Analysis](Artifacts/teleconnection_analysis.png)
+![Teleconnection Analysis](../Artifacts/teleconnection_analysis.png)
 *Figure 1: Cross-correlation matrices (left) and synchronized event frequencies (right) for historical and future periods*
 
 ### 4.2 Inter-Regional Correlations
@@ -166,7 +166,7 @@ Mean inter-regional correlation:
 
 The Mediterranean-Southern Europe correlation is expected given geographic overlap. More interesting are the cross-continental correlations (Amazon-Southern Africa, Sahel-Mediterranean).
 
-![Regional Time Series](Artifacts/teleconnection_timeseries.png)
+![Regional Time Series](../Artifacts/teleconnection_timeseries.png)
 *Figure 2: Regional compound event time series comparing historical and future variability*
 
 ### 4.4 Regional Compound Event Changes

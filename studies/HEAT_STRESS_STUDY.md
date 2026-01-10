@@ -126,7 +126,7 @@ The complete analysis is in `examples/run_heat_stress_analysis.py`.
 
 **Key Finding**: Dangerous heat stress conditions increase from rare (0.5% of time) to common (17.5% of time) globally.
 
-![Global Heat Stress Maps](Artifacts/heat_stress_global.png)
+![Global Heat Stress Maps](../Artifacts/heat_stress_global.png)
 *Figure 1: Global Wet Bulb Temperature exceedance frequency (historical, future, and change)*
 
 ### 4.2 Regional Changes
@@ -142,14 +142,14 @@ The complete analysis is in `examples/run_heat_stress_analysis.py`.
 
 **Southeast Asia** emerges as the most extreme hotspot, with dangerous heat stress conditions **two-thirds of all months** by end-century.
 
-![Regional Heat Stress](Artifacts/heat_stress_regional.png)
+![Regional Heat Stress](../Artifacts/heat_stress_regional.png)
 *Figure 2: Regional heat stress by threshold level*
 
 ### 4.3 Population Exposure
 
 Converting frequency to person-hours of exposure:
 
-![Population Exposure](Artifacts/heat_stress_exposure.png)
+![Population Exposure](../Artifacts/heat_stress_exposure.png)
 *Figure 3: Population exposure to very dangerous heat stress (WBT > 28°C)*
 
 **South Asia** dominates due to massive population:

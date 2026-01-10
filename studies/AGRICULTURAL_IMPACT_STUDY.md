@@ -74,7 +74,7 @@ GDD = Σ max(0, T_monthly - 10°C) × 30 days
 | Growing Season | 9.4 months | 9.8 months | +0.4 months |
 | Heat Stress Months | 0.22 | 1.20 | **+0.98 (+445%)** |
 
-![Global Agricultural Impacts](Artifacts/agricultural_global.png)
+![Global Agricultural Impacts](../Artifacts/agricultural_global.png)
 *Figure 1: Global maps of agricultural climate changes. Top-left: GDD change (green = increase). Top-right: Heat stress increase. Bottom-left: Growing season change. Bottom-right: Severe heat by end-century.*
 
 ### 3.2 Regional Results
@@ -88,7 +88,7 @@ GDD = Σ max(0, T_monthly - 10°C) × 30 days
 | **Brazilian Cerrado** | +1,361 (+30%) | +2.2 months | +0.5 months | **MIXED** |
 | **Australian Wheat Belt** | +1,018 (+34%) | +1.3 months | +0.3 months | **MIXED** |
 
-![Regional Agricultural Impacts](Artifacts/agricultural_regional.png)
+![Regional Agricultural Impacts](../Artifacts/agricultural_regional.png)
 *Figure 2: Regional comparison of agricultural metrics. Note the dramatic increase in heat stress months for the African Sahel.*
 
 ### 3.3 Winners: High-Latitude Breadbaskets
