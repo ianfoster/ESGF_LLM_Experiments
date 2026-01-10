@@ -387,78 +387,83 @@ def plot_heat_stress_results(results):
         print("Missing required scenarios for plotting")
         return
 
-    # Figure 1: Global maps of WBT>32°C change
+    # Figure 1: Global maps - use DANGEROUS threshold (26°C) for better land signal
     fig = plt.figure(figsize=(16, 10))
 
-    # Historical
+    # Historical - dangerous threshold
     ax1 = fig.add_subplot(2, 2, 1, projection=ccrs.Robinson())
     ax1.set_global()
 
-    hist_vd = convert_lon_to_180(results["historical"]["very_dangerous"])
+    hist_d = convert_lon_to_180(results["historical"]["dangerous"])
 
     im1 = ax1.pcolormesh(
-        hist_vd.lon, hist_vd.lat, hist_vd,
-        cmap="YlOrRd", vmin=0, vmax=30,
+        hist_d.lon, hist_d.lat, hist_d,
+        cmap="YlOrRd", vmin=0, vmax=50,
         transform=ccrs.PlateCarree(),
         shading="auto"
     )
-    ax1.add_feature(cfeature.COASTLINE, linewidth=0.5)
-    ax1.add_feature(cfeature.BORDERS, linewidth=0.3, linestyle="--")
-    ax1.set_title(f"Historical (1995-2014)\nWBT > {WBT_VERY_DANGEROUS}°C Frequency", fontsize=11)
+    # Add ocean mask ON TOP to hide ocean data
+    ax1.add_feature(cfeature.OCEAN, facecolor='white', zorder=2)
+    ax1.add_feature(cfeature.COASTLINE, linewidth=0.5, zorder=3)
+    ax1.add_feature(cfeature.BORDERS, linewidth=0.3, linestyle="--", zorder=3)
+    ax1.set_title(f"Historical (1995-2014)\nWBT > {WBT_DANGEROUS}°C Frequency", fontsize=11)
     plt.colorbar(im1, ax=ax1, orientation="horizontal", pad=0.05, shrink=0.6, label="% of time")
 
-    # Future SSP5-8.5
+    # Future SSP5-8.5 - dangerous threshold
     ax2 = fig.add_subplot(2, 2, 2, projection=ccrs.Robinson())
     ax2.set_global()
 
-    future_vd = convert_lon_to_180(results["end_century_ssp585"]["very_dangerous"])
+    future_d = convert_lon_to_180(results["end_century_ssp585"]["dangerous"])
 
     im2 = ax2.pcolormesh(
-        future_vd.lon, future_vd.lat, future_vd,
-        cmap="YlOrRd", vmin=0, vmax=30,
+        future_d.lon, future_d.lat, future_d,
+        cmap="YlOrRd", vmin=0, vmax=50,
         transform=ccrs.PlateCarree(),
         shading="auto"
     )
-    ax2.add_feature(cfeature.COASTLINE, linewidth=0.5)
-    ax2.add_feature(cfeature.BORDERS, linewidth=0.3, linestyle="--")
-    ax2.set_title(f"End-Century SSP5-8.5 (2070-2099)\nWBT > {WBT_VERY_DANGEROUS}°C Frequency", fontsize=11)
+    ax2.add_feature(cfeature.OCEAN, facecolor='white', zorder=2)
+    ax2.add_feature(cfeature.COASTLINE, linewidth=0.5, zorder=3)
+    ax2.add_feature(cfeature.BORDERS, linewidth=0.3, linestyle="--", zorder=3)
+    ax2.set_title(f"End-Century SSP5-8.5 (2070-2099)\nWBT > {WBT_DANGEROUS}°C Frequency", fontsize=11)
     plt.colorbar(im2, ax=ax2, orientation="horizontal", pad=0.05, shrink=0.6, label="% of time")
 
-    # Change map
+    # Change map - dangerous threshold
     ax3 = fig.add_subplot(2, 2, 3, projection=ccrs.Robinson())
     ax3.set_global()
 
-    change_vd = future_vd - hist_vd
+    change_d = future_d - hist_d
 
     im3 = ax3.pcolormesh(
-        change_vd.lon, change_vd.lat, change_vd,
-        cmap="Reds", vmin=0, vmax=20,
+        change_d.lon, change_d.lat, change_d,
+        cmap="Reds", vmin=0, vmax=40,
         transform=ccrs.PlateCarree(),
         shading="auto"
     )
-    ax3.add_feature(cfeature.COASTLINE, linewidth=0.5)
-    ax3.add_feature(cfeature.BORDERS, linewidth=0.3, linestyle="--")
-    ax3.set_title(f"Change in WBT > {WBT_VERY_DANGEROUS}°C Frequency\n(SSP5-8.5 minus Historical)", fontsize=11)
+    ax3.add_feature(cfeature.OCEAN, facecolor='white', zorder=2)
+    ax3.add_feature(cfeature.COASTLINE, linewidth=0.5, zorder=3)
+    ax3.add_feature(cfeature.BORDERS, linewidth=0.3, linestyle="--", zorder=3)
+    ax3.set_title(f"Change in WBT > {WBT_DANGEROUS}°C Frequency\n(SSP5-8.5 minus Historical)", fontsize=11)
     plt.colorbar(im3, ax=ax3, orientation="horizontal", pad=0.05, shrink=0.6, label="Δ percentage points")
 
-    # Extreme threshold map (future)
+    # Very dangerous threshold map (future) - 28°C
     ax4 = fig.add_subplot(2, 2, 4, projection=ccrs.Robinson())
     ax4.set_global()
 
-    future_extreme = convert_lon_to_180(results["end_century_ssp585"]["extreme"])
+    future_vd = convert_lon_to_180(results["end_century_ssp585"]["very_dangerous"])
 
     im4 = ax4.pcolormesh(
-        future_extreme.lon, future_extreme.lat, future_extreme,
-        cmap="hot_r", vmin=0, vmax=5,
+        future_vd.lon, future_vd.lat, future_vd,
+        cmap="hot_r", vmin=0, vmax=15,
         transform=ccrs.PlateCarree(),
         shading="auto"
     )
-    ax4.add_feature(cfeature.COASTLINE, linewidth=0.5)
-    ax4.add_feature(cfeature.BORDERS, linewidth=0.3, linestyle="--")
-    ax4.set_title(f"End-Century SSP5-8.5\nWBT > {WBT_EXTREME}°C (Extreme Heat)", fontsize=11)
+    ax4.add_feature(cfeature.OCEAN, facecolor='white', zorder=2)
+    ax4.add_feature(cfeature.COASTLINE, linewidth=0.5, zorder=3)
+    ax4.add_feature(cfeature.BORDERS, linewidth=0.3, linestyle="--", zorder=3)
+    ax4.set_title(f"End-Century SSP5-8.5\nWBT > {WBT_VERY_DANGEROUS}°C (Very Dangerous)", fontsize=11)
     plt.colorbar(im4, ax=ax4, orientation="horizontal", pad=0.05, shrink=0.6, label="% of time")
 
-    plt.suptitle("Human Heat Stress: Wet Bulb Temperature Exceedance\nGFDL-ESM4 CMIP6", fontsize=13, y=0.98)
+    plt.suptitle("Human Heat Stress: Wet Bulb Temperature Exceedance (Land Only)\nGFDL-ESM4 CMIP6", fontsize=13, y=0.98)
     plt.tight_layout(rect=[0, 0, 1, 0.95])
 
     output_path = ARTIFACTS_DIR / "heat_stress_global.png"
