@@ -1,6 +1,6 @@
 # ESGF + LLM Experiments
 
-I report on experiments that explore the use of a coding agent and Large Language Model (LLM)---Claude + Opus4.5---to discover and analyze climate data from the **Earth System Grid Federation (ESGF)**, specifically CMIP6 model output hosted at U.S. Department of Energy data centers.
+I report on experiments that explore the use of a coding agent and Large Language Model (LLM)---Claude + Opus4.5---to discover and analyze climate data from the [**Earth System Grid Federation (ESGF)**](https://esgf.github.io), specifically CMIP6 model output hosted at U.S. Department of Energy data centers.
 
 ## Table of Contents
 
