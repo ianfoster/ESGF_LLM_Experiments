@@ -1,0 +1,188 @@
+{
+  "thresholds": {
+    "gdd_base_temp": 10,
+    "heat_stress_threshold": 30,
+    "severe_heat_threshold": 35,
+    "frost_threshold": 5
+  },
+  "regions": {
+    "US_Midwest": {
+      "title": "US Corn Belt",
+      "crops": "Corn, Soybeans"
+    },
+    "Europe": {
+      "title": "European Breadbasket",
+      "crops": "Wheat, Barley"
+    },
+    "South_Asia": {
+      "title": "Indo-Gangetic Plain",
+      "crops": "Rice, Wheat"
+    },
+    "Sahel": {
+      "title": "African Sahel",
+      "crops": "Millet, Sorghum"
+    },
+    "Brazil": {
+      "title": "Brazilian Cerrado",
+      "crops": "Soybeans, Corn"
+    },
+    "Australia": {
+      "title": "Australian Wheat Belt",
+      "crops": "Wheat"
+    }
+  },
+  "global_results": {
+    "historical": {
+      "gdd": 3035.9425313620113,
+      "growing_season_months": 9.383751627788978,
+      "heat_stress_months": 0.22372878865295182,
+      "severe_heat_months": 0.03485740656890534
+    },
+    "end_century_ssp585": {
+      "gdd": 3701.445347132449,
+      "growing_season_months": 9.797189775620817,
+      "heat_stress_months": 1.1981196798239713,
+      "severe_heat_months": 0.1701189860243959
+    },
+    "end_century_ssp126": {
+      "gdd": 3213.223509058914,
+      "growing_season_months": 9.50939702145348,
+      "heat_stress_months": 0.2988863788205512,
+      "severe_heat_months": 0.05977916382747639
+    }
+  },
+  "regional_results": {
+    "historical": {
+      "US_Midwest": {
+        "gdd": 1325.9588597994232,
+        "growing_season_months": 7.006817107547493,
+        "heat_stress_months": 0.0409179918415864,
+        "severe_heat_months": 0.0,
+        "drought_months": 2.3579041549951554
+      },
+      "Europe": {
+        "gdd": 942.2856583664005,
+        "growing_season_months": 8.11366256873807,
+        "heat_stress_months": 0.0,
+        "severe_heat_months": 0.0,
+        "drought_months": NaN
+      },
+      "South_Asia": {
+        "gdd": 3797.4532094540687,
+        "growing_season_months": 8.980617855983567,
+        "heat_stress_months": 2.3883561050062223,
+        "severe_heat_months": 0.9033177507983877,
+        "drought_months": 2.429088153319839
+      },
+      "Sahel": {
+        "gdd": 6197.9978229544895,
+        "growing_season_months": 11.999999999999982,
+        "heat_stress_months": 3.9037790498510763,
+        "severe_heat_months": 0.21321958001904442,
+        "drought_months": NaN
+      },
+      "Brazil": {
+        "gdd": 4509.789199386422,
+        "growing_season_months": 11.999999999999991,
+        "heat_stress_months": 0.4202731614509917,
+        "severe_heat_months": 0.004559763023379788,
+        "drought_months": 2.4913553362849212
+      },
+      "Australia": {
+        "gdd": 3027.874939940474,
+        "growing_season_months": 11.920497571288616,
+        "heat_stress_months": 0.5260606083786002,
+        "severe_heat_months": 0.01901084787929846,
+        "drought_months": 2.555385860731505
+      }
+    },
+    "end_century_ssp585": {
+      "US_Midwest": {
+        "gdd": 2018.465488179736,
+        "growing_season_months": 8.529786799206207,
+        "heat_stress_months": 0.31722464091197017,
+        "severe_heat_months": 0.03803387907236203,
+        "drought_months": 2.39763431104872
+      },
+      "Europe": {
+        "gdd": 1536.545537164215,
+        "growing_season_months": 9.651095038864595,
+        "heat_stress_months": 0.03230528737601347,
+        "severe_heat_months": 0.0,
+        "drought_months": NaN
+      },
+      "South_Asia": {
+        "gdd": 4647.848742599162,
+        "growing_season_months": 9.53383555609787,
+        "heat_stress_months": 3.7576488996233732,
+        "severe_heat_months": 1.831504499071501,
+        "drought_months": 2.5420115320560774
+      },
+      "Sahel": {
+        "gdd": 7507.630523475534,
+        "growing_season_months": 11.999999999999982,
+        "heat_stress_months": 6.820177528639326,
+        "severe_heat_months": 2.812457325558119,
+        "drought_months": NaN
+      },
+      "Brazil": {
+        "gdd": 5870.800644316952,
+        "growing_season_months": 11.999999999999991,
+        "heat_stress_months": 2.62403474361853,
+        "severe_heat_months": 0.4976725223501452,
+        "drought_months": 4.943260820165344
+      },
+      "Australia": {
+        "gdd": 4045.3952088877895,
+        "growing_season_months": 11.995447777430241,
+        "heat_stress_months": 1.7713438881488037,
+        "severe_heat_months": 0.3139994213701258,
+        "drought_months": 3.3612125799126296
+      }
+    },
+    "end_century_ssp126": {
+      "US_Midwest": {
+        "gdd": 1525.387969257051,
+        "growing_season_months": 7.62370648257993,
+        "heat_stress_months": 0.0730223410170631,
+        "severe_heat_months": 0.0011027132107626096,
+        "drought_months": 2.4776647663683407
+      },
+      "Europe": {
+        "gdd": 1089.2723115993535,
+        "growing_season_months": 8.494092413828456,
+        "heat_stress_months": 0.0005327423253596183,
+        "severe_heat_months": 0.0,
+        "drought_months": NaN
+      },
+      "South_Asia": {
+        "gdd": 3986.337572818783,
+        "growing_season_months": 9.161314735721023,
+        "heat_stress_months": 2.6470658777061593,
+        "severe_heat_months": 1.1536927661429723,
+        "drought_months": 2.384597075771195
+      },
+      "Sahel": {
+        "gdd": 6569.5339984848815,
+        "growing_season_months": 11.999999999999982,
+        "heat_stress_months": 4.857911810272377,
+        "severe_heat_months": 0.7494595138307295,
+        "drought_months": NaN
+      },
+      "Brazil": {
+        "gdd": 4747.079399329802,
+        "growing_season_months": 11.999999999999991,
+        "heat_stress_months": 0.6441197040918373,
+        "severe_heat_months": 0.01820443876065063,
+        "drought_months": 2.7585307303835926
+      },
+      "Australia": {
+        "gdd": 3277.3774798466375,
+        "growing_season_months": 11.957034541586701,
+        "heat_stress_months": 0.7780439337861165,
+        "severe_heat_months": 0.02789414200822133,
+        "drought_months": 2.8812288331610327
+      }
+    }
+  }
+}
