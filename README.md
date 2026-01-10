@@ -52,7 +52,7 @@ you think?* which led to the generation of some initial code. I followed up with
 | *"Same y-axis range for both graphs"* | Consistent 6-24°C scale across all 4 regional plots |
 | *"How will GPP change in the future compared to now, using CESM2 and ssp585?"* | GPP change analysis showing +44% global increase, +99% in Arctic |
 | *"Can you create global maps for them?"* | Regional GPP maps by climate zone |
-| *"Create a table of all CMIP6 run datasets that are at Argonne and ORNL"* | `doe_cmip6_holdings.json` inventory (~11.6M datasets) |
+| *"Create a table of all CMIP6 run datasets that are at Argonne and ORNL"* | `Artifacts/doe_cmip6_holdings.json` inventory (~11.6M datasets) |
 
 ## Installation
 
@@ -83,7 +83,8 @@ ESGF_LLM_Experiments/
 │   ├── run_regional_chicago_nz.py  # Regional: Chicago vs New Zealand
 │   ├── run_gpp_analysis.py         # GPP change analysis (CESM2)
 │   └── plot_gpp_regions.py         # Regional GPP maps
-└── doe_cmip6_holdings.json  # Inventory of CMIP6 data at DOE centers
+├── Artifacts/                # Generated figures and data files
+└── studies/                  # In-depth research study reports
 ```
 
 ## Analyses Performed
