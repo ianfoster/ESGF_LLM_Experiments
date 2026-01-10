@@ -1,6 +1,6 @@
 # ESGF + LLM Experiments
 
-Exploring the use of Large Language Models (LLMs) to discover and analyze climate data from the **Earth System Grid Federation (ESGF)**, specifically CMIP6 model output hosted at U.S. Department of Energy data centers.
+I report on experiments that explore the use of a coding agent and Large Language Model (LLM)---Claude + Opus4.5---to discover and analyze climate data from the **Earth System Grid Federation (ESGF)**, specifically CMIP6 model output hosted at U.S. Department of Energy data centers.
 
 ## Overview
 
@@ -11,9 +11,8 @@ This project demonstrates:
 
 **Data Sources:** Argonne National Lab (ALCF) and Oak Ridge National Lab (ORNL)
 
-## Research Studies
-
-This project includes four in-depth climate research studies analyzing compound hazards and societal impacts:
+This page describes the set up for the experiments and some simple studies that illustrate how the agent+LLM was used to interact with ESGF. 
+The following table provides pointers to four additional studies analyzing compound hazards and societal impacts:
 
 | Study | Key Finding | Full Report |
 |-------|-------------|-------------|
@@ -22,11 +21,13 @@ This project includes four in-depth climate research studies analyzing compound 
 | **[Human Heat Stress](#6-human-heat-stress-wet-bulb-temperature)** | 3 billion people face routine dangerous heat | [studies/HEAT_STRESS_STUDY.md](studies/HEAT_STRESS_STUDY.md) |
 | **[Agricultural Impact](#7-agricultural-impact-winners-and-losers)** | High-latitude winners, tropical losers | [studies/AGRICULTURAL_IMPACT_STUDY.md](studies/AGRICULTURAL_IMPACT_STUDY.md) |
 
+I am not an expert in climate research; apart from some brief framing, the results presented here are all Claude's work.
+
 ## LLM Model Used
 
 This project was developed interactively using **Claude Opus 4.5** via [Claude Code](https://claude.com/claude-code), Anthropic's CLI tool for software engineering tasks. The entire workflow—from initial exploration of ESGF data access patterns, through code generation, to analysis and visualization—was driven by natural language conversation with the model.
 
-### Estimated Cost
+### Estimated Cost For Studies In this File
 
 | Token Type | Usage (est.) | Rate | Cost |
 |------------|--------------|------|------|
@@ -36,13 +37,15 @@ This project was developed interactively using **Claude Opus 4.5** via [Claude C
 
 The session produced ~2,500 lines of working code, analyzed ~1.8 GB of climate data, and generated publication-ready figures.
 
+The other four studies have a similar size, scope, and cost.
+
 ## Session Queries
 
 The following natural language queries drove the analyses in this project.
 
-I started with *I want to explore the use of LLMs to analyze data maintained by the Earth System Grid Federation. That will 
+I started with "*I want to explore the use of LLMs to analyze data maintained by the Earth System Grid Federation. That will 
 require you to know what ESGF is; how to access its holdings; and what interesting questions can be used. What do 
-you think?* which led to the generation of some initial code. I followed up with the following. (Not listed are a few "*plot this*" or similar requests plus one to "*consider only datasets at Argonne or Oak Ridge*" [because it had problems with some other ESGF sites] and a final "*I want to commit the code that we have written to GitHub with a README that describes it briefly and details the queries performed and the pictures generated.*). 
+you think?*" which led to the generation of some initial code. I followed up with the following. (Not listed are a few "*plot this*" or similar requests plus one to "*consider only datasets at Argonne or Oak Ridge*" [because it had problems with some other ESGF sites] and a final "*I want to commit the code that we have written to GitHub with a README that describes it briefly and details the queries performed and the pictures generated.*). 
 
 | Query | Result |
 |-------|--------|
