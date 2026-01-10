@@ -2,6 +2,28 @@
 
 I report on experiments that explore the use of a coding agent and Large Language Model (LLM)---Claude + Opus4.5---to discover and analyze climate data from the **Earth System Grid Federation (ESGF)**, specifically CMIP6 model output hosted at U.S. Department of Energy data centers.
 
+## Table of Contents
+
+- [Overview](#overview)
+- [LLM Model Used](#llm-model-used)
+- [Session Queries](#session-queries)
+- [Installation](#installation)
+- [Project Structure](#project-structure)
+- [Analyses Performed](#analyses-performed)
+  - [1. Global Temperature Projections](#1-global-temperature-projections)
+  - [2. Regional Temperature Analysis](#2-regional-temperature-analysis)
+  - [3. GPP (Gross Primary Production) Change](#3-gpp-gross-primary-production-change)
+- [ESGF Client Usage](#esgf-client-usage)
+- [LLM Interface Usage](#llm-interface-usage)
+- [Key Findings](#key-findings)
+- [References](#references)
+- [Extended Research Studies](#extended-research-studies)
+  - [4. Compound Heat-Drought Events](#4-compound-heat-drought-events)
+  - [5. Teleconnection Analysis](#5-teleconnection-analysis-synchronized-global-events)
+  - [6. Human Heat Stress](#6-human-heat-stress-wet-bulb-temperature)
+  - [7. Agricultural Impact](#7-agricultural-impact-winners-and-losers)
+- [Summary of All Studies](#summary-of-all-studies)
+
 ## Overview
 
 This project demonstrates:
