@@ -1,0 +1,162 @@
+{
+  "thresholds": {
+    "hot": 24,
+    "dangerous": 26,
+    "very_dangerous": 28,
+    "extreme": 30
+  },
+  "global_results": {
+    "historical": {
+      "hot": 14.29424967074051,
+      "dangerous": 0.5160332214172539,
+      "very_dangerous": 0.01310064016189923,
+      "extreme": 4.6936782881007376e-05
+    },
+    "end_century_ssp585": {
+      "hot": 28.25663790276175,
+      "dangerous": 17.482850468579795,
+      "very_dangerous": 2.027990691635478,
+      "extreme": 0.03283179416364003
+    },
+    "end_century_ssp126": {
+      "hot": 18.77283187477595,
+      "dangerous": 2.8847340797749697,
+      "very_dangerous": 0.0376072427744084,
+      "extreme": 0.0006669094421097693
+    }
+  },
+  "regional_results": {
+    "historical": {
+      "South_Asia": {
+        "hot": 36.011789686076526,
+        "dangerous": 5.888474123642054,
+        "very_dangerous": 0.09546183646357216,
+        "extreme": 0.0,
+        "population": 1900000000.0
+      },
+      "Middle_East": {
+        "hot": 7.544805344905095,
+        "dangerous": 2.5553943161800796,
+        "very_dangerous": 0.4484131074275696,
+        "extreme": 0.002200341824267382,
+        "population": 400000000.0
+      },
+      "West_Africa": {
+        "hot": 23.294716743982583,
+        "dangerous": 0.6605125586000788,
+        "very_dangerous": 0.0,
+        "extreme": 0.0,
+        "population": 400000000.0
+      },
+      "Southeast_Asia": {
+        "hot": 60.198676066325945,
+        "dangerous": 2.8619299072195212,
+        "very_dangerous": 0.0,
+        "extreme": 0.0,
+        "population": 700000000.0
+      },
+      "US_Gulf": {
+        "hot": 14.717728568646647,
+        "dangerous": 0.22630039823069695,
+        "very_dangerous": 0.0,
+        "extreme": 0.0,
+        "population": 50000000.0
+      },
+      "Amazon": {
+        "hot": 13.19228971750004,
+        "dangerous": 0.08448301552946477,
+        "very_dangerous": 0.0,
+        "extreme": 0.0,
+        "population": 30000000.0
+      }
+    },
+    "end_century_ssp585": {
+      "South_Asia": {
+        "hot": 53.063051819962986,
+        "dangerous": 39.1661129981752,
+        "very_dangerous": 10.274857774834333,
+        "extreme": 0.3559760095283373,
+        "population": 1900000000.0
+      },
+      "Middle_East": {
+        "hot": 15.304712547829972,
+        "dangerous": 9.55800883961169,
+        "very_dangerous": 3.713831893604733,
+        "extreme": 0.9338935833640134,
+        "population": 400000000.0
+      },
+      "West_Africa": {
+        "hot": 59.21623117398795,
+        "dangerous": 32.69754052299469,
+        "very_dangerous": 4.129258525324747,
+        "extreme": 0.005305646236163418,
+        "population": 400000000.0
+      },
+      "Southeast_Asia": {
+        "hot": 83.82234595963801,
+        "dangerous": 65.49030608814022,
+        "very_dangerous": 9.670622091130301,
+        "extreme": 0.001525590537653544,
+        "population": 700000000.0
+      },
+      "US_Gulf": {
+        "hot": 33.53725570902908,
+        "dangerous": 20.992931825702208,
+        "very_dangerous": 4.0317635772783404,
+        "extreme": 0.0,
+        "population": 50000000.0
+      },
+      "Amazon": {
+        "hot": 58.227765191454395,
+        "dangerous": 23.98489465095506,
+        "very_dangerous": 0.9533093378039941,
+        "extreme": 0.0005795375930241707,
+        "population": 30000000.0
+      }
+    },
+    "end_century_ssp126": {
+      "South_Asia": {
+        "hot": 40.834490390448096,
+        "dangerous": 12.30260793065382,
+        "very_dangerous": 0.5010625215938352,
+        "extreme": 0.0,
+        "population": 1900000000.0
+      },
+      "Middle_East": {
+        "hot": 9.20809968065273,
+        "dangerous": 3.650300441396266,
+        "very_dangerous": 0.9679705020842201,
+        "extreme": 0.0312639394607238,
+        "population": 400000000.0
+      },
+      "West_Africa": {
+        "hot": 36.16584690092288,
+        "dangerous": 4.1132994278099355,
+        "very_dangerous": 0.0061823699986101495,
+        "extreme": 0.0,
+        "population": 400000000.0
+      },
+      "Southeast_Asia": {
+        "hot": 69.89599513861683,
+        "dangerous": 16.751031909728322,
+        "very_dangerous": 0.007465553418759177,
+        "extreme": 0.0,
+        "population": 700000000.0
+      },
+      "US_Gulf": {
+        "hot": 21.40793442385141,
+        "dangerous": 4.711733788013263,
+        "very_dangerous": 0.0,
+        "extreme": 0.0,
+        "population": 50000000.0
+      },
+      "Amazon": {
+        "hot": 28.896546223289864,
+        "dangerous": 0.4435817851792674,
+        "very_dangerous": 0.0,
+        "extreme": 0.0,
+        "population": 30000000.0
+      }
+    }
+  }
+}
