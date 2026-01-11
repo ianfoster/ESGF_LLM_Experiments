@@ -1,6 +1,6 @@
 # ESGF + LLM Experiments
 
-I report on experiments that explore the use of a coding agent and Large Language Model (LLM)---Claude + Opus4.5---to discover and analyze climate data from the **Earth System Grid Federation (ESGF)**, specifically CMIP6 model output hosted at U.S. Department of Energy data centers.
+I report on experiments that explore the use of a coding agent and Large Language Model (LLM)---Claude + Opus4.5---to discover and analyze climate data from the [**Earth System Grid Federation (ESGF)**](https://esgf.github.io), specifically CMIP6 model output hosted at U.S. Department of Energy data centers.
 
 ## Table of Contents
 
@@ -34,8 +34,7 @@ This project demonstrates:
 
 **Data Sources:** Argonne National Lab (ALCF) and Oak Ridge National Lab (ORNL)
 
-This page describes the set up for the experiments and some simple studies that illustrate how the agent+LLM was used to interact with ESGF, including the  
-following analyses of compound hazards and societal impacts:
+This page describes the set up for the experiments; some simple studies that illustrate how the agent+LLM was used to interact with ESGF; and the following four analyses of compound hazards and societal impacts:
 
 | Study | Key Finding | Full Report |
 |-------|-------------|-------------|
@@ -67,9 +66,9 @@ The other four studies have a similar size, scope, and cost.
 
 The following natural language queries drove the analyses in this project.
 
-I started with "*I want to explore the use of LLMs to analyze data maintained by the Earth System Grid Federation. That will 
+I started with "**I want to explore the use of LLMs to analyze data maintained by the Earth System Grid Federation. That will 
 require you to know what ESGF is; how to access its holdings; and what interesting questions can be used. What do 
-you think?*" which led to the generation of some initial code. I followed up with the following. (Not listed are a few "*plot this*" or similar requests plus one to "*consider only datasets at Argonne or Oak Ridge*" [because it had problems with some other ESGF sites] and a final "*I want to commit the code that we have written to GitHub with a README that describes it briefly and details the queries performed and the pictures generated.*). 
+you think?**" which led to the generation of some initial code. I followed up with the following. (Not listed are a few "**plot this**" or similar requests plus one to "**consider only datasets at Argonne or Oak Ridge**" [because some other sites were unreliable] and a final "**I want to commit the code that we have written to GitHub with a README that describes it briefly and details the queries performed and the pictures generated.**"). 
 
 | Query | Result |
 |-------|--------|
@@ -227,7 +226,7 @@ This project is licensed under the BSD 3-Clause License. See [LICENSE](LICENSE) 
 
 ## Extended Research Studies
 
-The following in-depth studies were conducted as follow-up exploration, investigating compound climate hazards and their societal impacts using ~2.5 GB of CMIP6 data.
+The following in-depth studies were conducted as follow-up exploration, investigating compound climate hazards and their societal impacts using ~2.5 GB of CMIP6 data. The prompt was simple: **"I now want to operate more broadly to conduct open-ended research with ESGF. Come up with some hypothesis and then work with ESGF data to explore that hypothesis. Something really innovative."** These are four of 10 studies suggested by Claude.
 
 ### 4. Compound Heat-Drought Events
 
