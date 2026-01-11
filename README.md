@@ -17,6 +17,7 @@ I report on experiments that explore the use of a coding agent and Large Languag
 - [LLM Interface Usage](#llm-interface-usage)
 - [Key Findings](#key-findings)
 - [References](#references)
+- [License](#license)
 - [Extended Research Studies](#extended-research-studies)
   - [4. Compound Heat-Drought Events](#4-compound-heat-drought-events)
   - [5. Teleconnection Analysis](#5-teleconnection-analysis-synchronized-global-events)
@@ -217,6 +218,10 @@ response = assistant.search("Find monthly precipitation data from the high emiss
 - [CMIP6 Data Access](https://wcrp-cmip.org/cmip-data-access/)
 - [Argonne ALCF](https://www.alcf.anl.gov/)
 - [Oak Ridge ORNL](https://www.ornl.gov/)
+
+## License
+
+This project is licensed under the BSD 3-Clause License. See [LICENSE](LICENSE) for details.
 
 ---
 
