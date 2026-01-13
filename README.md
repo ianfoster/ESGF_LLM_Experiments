@@ -76,7 +76,7 @@ you think?**" which led to the generation of some initial code. I followed up wi
 | *"I want to repeat the analysis but focusing just on Chicago and New Zealand"* | Regional temperature comparison between Northern and Southern Hemisphere locations |
 | *"Repeat for Oak Ridge and Livermore"* | Temperature projections at DOE national lab locations |
 | *"Same y-axis range for both graphs"* | Consistent 6-24°C scale across all 4 regional plots |
-| *"How will GPP change in the future compared to now, using CESM2 and ssp585?"* | GPP change analysis showing +44% global increase, +99% in Arctic |
+| *"How will GPP change in the future compared to now, using CESM2 and ssp585?"* [Question suggested by [Elias Massoud](https://www.ornl.gov/staff-profile/elias-c-massoud)] | GPP change analysis showing +44% global increase, +99% in Arctic |
 | *"Can you create global maps for them?"* | Regional GPP maps by climate zone |
 | *"Create a table of all CMIP6 run datasets that are at Argonne and ORNL"* | `Artifacts/doe_cmip6_holdings.json` inventory (~11.6M datasets) |
 
